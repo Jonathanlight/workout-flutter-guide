@@ -34,14 +34,20 @@ value.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
 
 Dart's core library has no Unicode normalization and the package takes no
 runtime dependency beyond `flutter_svg`. The port therefore uses a **generated
-transliteration table**: for every code point below U+2000 whose canonical
-decomposition is `<ASCII alphanumeric> + combining marks (U+0300–U+036F)`, the
-table maps it to that base character. Everything else is left alone and, being
+transliteration table**: for every code point whose canonical decomposition
+(applied recursively) is `<ASCII alphanumeric> + combining marks
+(U+0300–U+036F)`, the table maps it to that base character, lower-cased. 490
+code points qualify, all of them Latin. Everything else is left alone and, being
 outside `[a-z0-9]`, collapses to a space — which is exactly what the JavaScript
 does for `ß`, `æ`, `ø`, `ł` and friends.
 
-The table is produced by `tool/generate_normalizer_table.dart` and checked in,
-so behaviour is reviewable and does not drift with SDK versions.
+The table is produced by `tool/generate_normalizer_table.dart` from the
+official `UnicodeData.txt` and checked in, so the behaviour is reviewable and
+does not drift with SDK versions. Combining marks that appear on their own are
+dropped rather than turned into a separator, matching the JavaScript.
+
+Parity is verified, not assumed: `test/golden/normalizer_parity.json` holds 524
+input/output pairs produced by running the upstream JavaScript.
 
 Order of operations is load-bearing: `&` becomes ` and ` **after** diacritics
 are stripped and **before** the non-alphanumeric collapse.

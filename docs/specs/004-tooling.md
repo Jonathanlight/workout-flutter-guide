@@ -49,4 +49,6 @@ covered by a test rather than this script, so it runs in the same
 ## `generate_normalizer_table.dart`
 
 Emits `lib/src/catalog/diacritics.g.dart`, the transliteration table described
-in spec 002. Run rarely; checked in.
+in spec 002, from the canonical decompositions in `UnicodeData.txt` (fetched
+from unicode.org, or read from a local path passed as an argument). Run rarely;
+the output is checked in.
