@@ -1,0 +1,2101 @@
+{
+"_comment": "Generated from the upstream JavaScript normalizeSearchText. Regenerate with node against packages/workout-guide/src/index.ts if upstream ever changes.",
+"cases": [
+{
+"input": "",
+"expected": ""
+},
+{
+"input": " ",
+"expected": ""
+},
+{
+"input": "&",
+"expected": "and"
+},
+{
+"input": "&&",
+"expected": "and and"
+},
+{
+"input": "a&b",
+"expected": "a and b"
+},
+{
+"input": "R&B",
+"expected": "r and b"
+},
+{
+"input": " &x",
+"expected": "and x"
+},
+{
+"input": "x& ",
+"expected": "x and"
+},
+{
+"input": "Pull-up Bar",
+"expected": "pull up bar"
+},
+{
+"input": "Café & Crème!",
+"expected": "cafe and creme"
+},
+{
+"input": "áb",
+"expected": "ab"
+},
+{
+"input": "́abc",
+"expected": "abc"
+},
+{
+"input": "abć",
+"expected": "abc"
+},
+{
+"input": "İstanbul",
+"expected": "istanbul"
+},
+{
+"input": "Ångström",
+"expected": "angstrom"
+},
+{
+"input": "weẛird",
+"expected": "we ird"
+},
+{
+"input": "straße",
+"expected": "stra e"
+},
+{
+"input": "Æther",
+"expected": "ther"
+},
+{
+"input": "łódź",
+"expected": "odz"
+},
+{
+"input": "  multiple   spaces  ",
+"expected": "multiple spaces"
+},
+{
+"input": "UPPER Case 123",
+"expected": "upper case 123"
+},
+{
+"input": "incline dumbbell press",
+"expected": "incline dumbbell press"
+},
+{
+"input": "Resistance Band",
+"expected": "resistance band"
+},
+{
+"input": "weight_reps",
+"expected": "weight reps"
+},
+{
+"input": "1b',.90アZµ",
+"expected": "1b 90 z"
+},
+{
+"input": "cbZ_.ﬁ",
+"expected": "cbz"
+},
+{
+"input": "bक/ア́.Åµ'",
+"expected": "b a"
+},
+{
+"input": "a-̀ß' _ß0Zł0",
+"expected": "a 0z 0"
+},
+{
+"input": "æ’!cÅ",
+"expected": "ca"
+},
+{
+"input": "1łZकé—øक़",
+"expected": "1 z e"
+},
+{
+"input": "Yc.",
+"expected": "yc"
+},
+{
+"input": "éZ.0ł'Åø-øæ_",
+"expected": "ez 0 a"
+},
+{
+"input": "'Y’-ア,-Åł'",
+"expected": "y a"
+},
+{
+"input": "क.ñX.cñİ'Y_क़ñ_",
+"expected": "nx cni y n"
+},
+{
+"input": "ĲİÅ !9,कア!",
+"expected": "ia 9"
+},
+{
+"input": "µ̀µİø.9ﬁĲZX",
+"expected": "i 9 zx"
+},
+{
+"input": "1 -̀’Yłł’Å中!क",
+"expected": "1 y a"
+},
+{
+"input": "a1ア'ß1é̀-Åa!ﬁ",
+"expected": "a1 1e aa"
+},
+{
+"input": "&ﬁ0Àﬁ’/ ø-ア中",
+"expected": "and 0a"
+},
+{
+"input": "a’ñĲb1øÀ,X,क़ZZ",
+"expected": "a n b1 a x zz"
+},
+{
+"input": "ĲYア99ẛक-!中’",
+"expected": "y 99"
+},
+{
+"input": "_ア/Àİø",
+"expected": "ai"
+},
+{
+"input": "中Å1,.Yß",
+"expected": "a1 y"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "क.µ.aYX.Y",
+"expected": "ayx y"
+},
+{
+"input": "cßYﬁ,'Ĳ_ア9क़क़ẛ,",
+"expected": "c y 9"
+},
+{
+"input": "ẛ́/00̀æ̀́ÅX0",
+"expected": "00 ax0"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "ß0,//ア",
+"expected": "0"
+},
+{
+"input": "9̀&'Å,Y",
+"expected": "9 and a y"
+},
+{
+"input": "क0XアaZ,",
+"expected": "0x az"
+},
+{
+"input": "́Ĳ",
+"expected": ""
+},
+{
+"input": "_İX-łał",
+"expected": "ix a"
+},
+{
+"input": "Åé̀क",
+"expected": "ae"
+},
+{
+"input": "Ĳ /é_XµアXñ",
+"expected": "e x xn"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "ẛﬁ中-XﬁZ&Y",
+"expected": "x z and y"
+},
+{
+"input": "Y,İ1क़,µ’c",
+"expected": "y i1 c"
+},
+{
+"input": "Źµक़中ñ!_ñ",
+"expected": "z n n"
+},
+{
+"input": "!İ9",
+"expected": "i9"
+},
+{
+"input": "ÀÅñYaÅ—क़0Y",
+"expected": "aanyaa 0y"
+},
+{
+"input": "_ﬁ!9æY,ø",
+"expected": "9 y"
+},
+{
+"input": "-ÅアÀ",
+"expected": "a a"
+},
+{
+"input": "中aकÀ09!10",
+"expected": "a a09 10"
+},
+{
+"input": "क 'é’_ß_!ﬁĲ",
+"expected": "e"
+},
+{
+"input": "XZ̀'",
+"expected": "xz"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "9!-Åक",
+"expected": "9 a"
+},
+{
+"input": "̀कa1Y アcøµक",
+"expected": "a1y c"
+},
+{
+"input": "̀9",
+"expected": "9"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "øcæ_",
+"expected": "c"
+},
+{
+"input": ",0æक́— ,-&",
+"expected": "0 and"
+},
+{
+"input": "́b&ß́,'-0łcẛ./",
+"expected": "b and 0 c"
+},
+{
+"input": "ÅæÀ..b/İß'Y'æ",
+"expected": "a a b i y"
+},
+{
+"input": "ﬁİアßb1!&µ!",
+"expected": "i b1 and"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "’",
+"expected": ""
+},
+{
+"input": "æñ̀’ﬁ1",
+"expected": "n 1"
+},
+{
+"input": "क़/!c̀a",
+"expected": "ca"
+},
+{
+"input": "ア/ø̀Yß—ñ",
+"expected": "y n"
+},
+{
+"input": "1ÀﬁÀ́ñİéक9",
+"expected": "1a anie 9"
+},
+{
+"input": "́ł&",
+"expected": "and"
+},
+{
+"input": "क़ÀİकaÀé_̀",
+"expected": "ai aae"
+},
+{
+"input": "µ’ñÅÅÅ_ﬁẛ-Zé",
+"expected": "naaa ze"
+},
+{
+"input": "—ßZ,À./ ",
+"expected": "z a"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "ẛ—Y",
+"expected": "y"
+},
+{
+"input": "́क़/łĲİ,",
+"expected": "i"
+},
+{
+"input": "a0",
+"expected": "a0"
+},
+{
+"input": "̀.&中ÅXक,1Å9Å",
+"expected": "and ax 1a9a"
+},
+{
+"input": "中क’ñÅ—ﬁ̀कÅ",
+"expected": "na a"
+},
+{
+"input": "-ẛÅ!,'中Ĳ,'ÅYé,",
+"expected": "a aye"
+},
+{
+"input": "ßñアZ",
+"expected": "n z"
+},
+{
+"input": " .",
+"expected": ""
+},
+{
+"input": " _Ý́ß",
+"expected": "y"
+},
+{
+"input": "ǺX_́łµb",
+"expected": "ax b"
+},
+{
+"input": "क़łẛaæÀł́アア’.Ĳ",
+"expected": "a a"
+},
+{
+"input": "'̀Ĳ",
+"expected": ""
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "ßİ-Å9—",
+"expected": "i a9"
+},
+{
+"input": "bİµक़bZ̀9",
+"expected": "bi bz9"
+},
+{
+"input": "Å&X!łñ_Åñßł'́",
+"expected": "a and x n an"
+},
+{
+"input": "Zẛbア",
+"expected": "z b"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": ".Ycb,",
+"expected": "ycb"
+},
+{
+"input": "b— ",
+"expected": "b"
+},
+{
+"input": "9ẛ1",
+"expected": "9 1"
+},
+{
+"input": "_Å!ø-’’1-",
+"expected": "a 1"
+},
+{
+"input": "0µbÀ",
+"expected": "0 ba"
+},
+{
+"input": "łİ/Yµ,0À’",
+"expected": "i y 0a"
+},
+{
+"input": "1क़cæア̀øYﬁßá",
+"expected": "1 c y a"
+},
+{
+"input": "Ĳ0̀øÅ ̀&中'—アẛ",
+"expected": "0 a and"
+},
+{
+"input": "̀µ'ñ,Z'",
+"expected": "n z"
+},
+{
+"input": "Å,Åक़—łßbĲñ&Ĳ_æ",
+"expected": "a a b n and"
+},
+{
+"input": "!ß'’'कa中/Z,́",
+"expected": "a z"
+},
+{
+"input": "क,ẛĲÅbZ",
+"expected": "abz"
+},
+{
+"input": ".İ,À",
+"expected": "i a"
+},
+{
+"input": "µøẛक中æ̀कßæ",
+"expected": ""
+},
+{
+"input": "Å'À!.1/ñ1ア&",
+"expected": "a a 1 n1 and"
+},
+{
+"input": "_ẛ'",
+"expected": ""
+},
+{
+"input": "µ中’é0/é.ø&À",
+"expected": "e0 e and a"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "ア9'cXकé9Ĳ0a",
+"expected": "9 cx e9 0a"
+},
+{
+"input": "éẛẛÅß&X!ẛ",
+"expected": "e a and x"
+},
+{
+"input": "Y",
+"expected": "y"
+},
+{
+"input": "ĲYक़X  ",
+"expected": "y x"
+},
+{
+"input": "क़ÀZ,1क́’’—.中",
+"expected": "az 1"
+},
+{
+"input": "ÅÅÀµ̀À",
+"expected": "aaa a"
+},
+{
+"input": "—X—0__!Z-",
+"expected": "x 0 z"
+},
+{
+"input": "&कY",
+"expected": "and y"
+},
+{
+"input": "á",
+"expected": "a"
+},
+{
+"input": "’ẛéc.éé",
+"expected": "ec ee"
+},
+{
+"input": "ÅY.!µ/̀1ア. ",
+"expected": "ay 1"
+},
+{
+"input": "' YX-À’क़éÅ1ÅÀİ",
+"expected": "yx a ea1aai"
+},
+{
+"input": "ﬁアĲÅ",
+"expected": "a"
+},
+{
+"input": "’",
+"expected": ""
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "̀ñ’!bZ.क़µb'क़c&",
+"expected": "n bz b c and"
+},
+{
+"input": "中Å'&µ̀Ĳ",
+"expected": "a and"
+},
+{
+"input": "ẛ",
+"expected": ""
+},
+{
+"input": "́ßñ0-",
+"expected": "n0"
+},
+{
+"input": "́Ĳéİक",
+"expected": "ei"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "Zñ!ñ1İﬁ",
+"expected": "zn n1i"
+},
+{
+"input": "aアǺX/中ø—ĲÅX_",
+"expected": "a ax ax"
+},
+{
+"input": "क9éÅ",
+"expected": "9ea"
+},
+{
+"input": "Ĳ1b’,-Àकaक́Z.1",
+"expected": "1b a a z 1"
+},
+{
+"input": "1 Ĳéﬁ'́",
+"expected": "1 e"
+},
+{
+"input": "ẛẛ,Åक ł/’ﬁ9Y'",
+"expected": "a 9y"
+},
+{
+"input": "́ßﬁ'aéÀµµĲ Å",
+"expected": "aea a"
+},
+{
+"input": "ẛæßकアłÅñ",
+"expected": "an"
+},
+{
+"input": "/,क़ł.́cñẛłł Ĳ",
+"expected": "cn"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "ﬁµ",
+"expected": ""
+},
+{
+"input": "0Å0中Å",
+"expected": "0a0 a"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": " ́ Yẛ!ß—İZß",
+"expected": "y iz"
+},
+{
+"input": "アłñĲアc—Y,é.Z̀",
+"expected": "n c y e z"
+},
+{
+"input": "0",
+"expected": "0"
+},
+{
+"input": "-ÀbcñXé",
+"expected": "abcnxe"
+},
+{
+"input": "ø̀ ,中",
+"expected": ""
+},
+{
+"input": "क़&-&Z—",
+"expected": "and and z"
+},
+{
+"input": "ł—,Ĳµ .Å!Å!aÅ",
+"expected": "a a aa"
+},
+{
+"input": "éア-YÅæµÀ̀!ÅÀ/ł",
+"expected": "e ya a aa"
+},
+{
+"input": "ẛ0,łक़æक़éébİ'a",
+"expected": "0 eebi a"
+},
+{
+"input": "X’Ĳé.’æ./",
+"expected": "x e"
+},
+{
+"input": "!90cÀÅcµø",
+"expected": "90caac"
+},
+{
+"input": "9Zéñ́&/9アø中",
+"expected": "9zen and 9"
+},
+{
+"input": "'-!ẛéß1Å",
+"expected": "e 1a"
+},
+{
+"input": " ",
+"expected": ""
+},
+{
+"input": ".İकøZİa!ア1Åø",
+"expected": "i zia 1a"
+},
+{
+"input": "!µłø0.ẛb—क",
+"expected": "0 b"
+},
+{
+"input": "—.YÅÀ",
+"expected": "yaa"
+},
+{
+"input": "́19ccÀĲ10,",
+"expected": "19cca 10"
+},
+{
+"input": "ア9łÅøア́µ ́0Ĳ—́",
+"expected": "9 a 0"
+},
+{
+"input": "cø_Å",
+"expected": "c a"
+},
+{
+"input": ",ø0øアæX",
+"expected": "0 x"
+},
+{
+"input": "'/1ÅZ_",
+"expected": "1az"
+},
+{
+"input": "’bXß,9क़_Yक",
+"expected": "bx 9 y"
+},
+{
+"input": "µ_.",
+"expected": ""
+},
+{
+"input": " ’a' ",
+"expected": "a"
+},
+{
+"input": "ア!",
+"expected": ""
+},
+{
+"input": "&1b9aæ,µñb&!",
+"expected": "and 1b9a nb and"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "́中",
+"expected": ""
+},
+{
+"input": "Y",
+"expected": "y"
+},
+{
+"input": "Åøﬁµ0Åﬁ",
+"expected": "a 0a"
+},
+{
+"input": "—c中",
+"expected": "c"
+},
+{
+"input": "ÅbXẛ",
+"expected": "abx"
+},
+{
+"input": "İ̀0ĲÅYZñ’ Y9'",
+"expected": "i0 ayzn y9"
+},
+{
+"input": "µकñł’中éÅﬁ",
+"expected": "n ea"
+},
+{
+"input": "̀01क_̀Å.́",
+"expected": "01 a"
+},
+{
+"input": "Åİ́0ñ",
+"expected": "ai0n"
+},
+{
+"input": "ñ!ø ẛY",
+"expected": "n y"
+},
+{
+"input": "Z",
+"expected": "z"
+},
+{
+"input": "̀",
+"expected": ""
+},
+{
+"input": "ø",
+"expected": ""
+},
+{
+"input": "9कXµककß1́æ̀X",
+"expected": "9 x 1 x"
+},
+{
+"input": "’Àæ0",
+"expected": "a 0"
+},
+{
+"input": "ﬁ_ ẛ.0æकø",
+"expected": "0"
+},
+{
+"input": "'",
+"expected": ""
+},
+{
+"input": ".̀क——कb’'",
+"expected": "b"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "'À",
+"expected": "a"
+},
+{
+"input": "ßæa& क़İY bZ中_ł",
+"expected": "a and iy bz"
+},
+{
+"input": "Åß-øÀñ",
+"expected": "a an"
+},
+{
+"input": "क़’ZX -—XZ'Å̀",
+"expected": "zx xz a"
+},
+{
+"input": "’Ǻ'_ﬁ1",
+"expected": "a 1"
+},
+{
+"input": "̀1éµĲ",
+"expected": "1e"
+},
+{
+"input": "Àc.İ’Xa_",
+"expected": "ac i xa"
+},
+{
+"input": "_9!é",
+"expected": "9 e"
+},
+{
+"input": "1aĲ̀&",
+"expected": "1a and"
+},
+{
+"input": "łア",
+"expected": ""
+},
+{
+"input": ".ﬁकæYİc̀bÅY",
+"expected": "yicbay"
+},
+{
+"input": "ñक़̀क़İ́é1İbñ-—",
+"expected": "n ie1ibn"
+},
+{
+"input": "øZ̀0,̀µ",
+"expected": "z0"
+},
+{
+"input": "中ZİÀß.",
+"expected": "zia"
+},
+{
+"input": "-Yﬁ1中",
+"expected": "y 1"
+},
+{
+"input": "/ææ ,0 !",
+"expected": "0"
+},
+{
+"input": "&’ ",
+"expected": "and"
+},
+{
+"input": "Y&ĲÅक़µÅक़—ññ ",
+"expected": "y and a a nn"
+},
+{
+"input": "YẛÅÀ'µX",
+"expected": "y aa x"
+},
+{
+"input": "ﬁYÀÅÅ",
+"expected": "yaaa"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "éYZ—’",
+"expected": "eyz"
+},
+{
+"input": "łÅµकcÅक़/",
+"expected": "a ca"
+},
+{
+"input": "’ẛﬁ X",
+"expected": "x"
+},
+{
+"input": "0ßZﬁ&c,",
+"expected": "0 z and c"
+},
+{
+"input": "ÅÅ中中—-øøéł́",
+"expected": "aa e"
+},
+{
+"input": "ß’XßYß0कłé!’",
+"expected": "x y 0 e"
+},
+{
+"input": " ßZµ æÀİ9’ZÀक",
+"expected": "z ai9 za"
+},
+{
+"input": "ß9中Z̀ﬁ",
+"expected": "9 z"
+},
+{
+"input": "bøÀ&_",
+"expected": "b a and"
+},
+{
+"input": "Ĳ/.9 ",
+"expected": "9"
+},
+{
+"input": "é",
+"expected": "e"
+},
+{
+"input": "0ﬁア中cß—9’ł -&",
+"expected": "0 c 9 and"
+},
+{
+"input": "—-Åćø,Å—éÅ.ア",
+"expected": "ac a ea"
+},
+{
+"input": "Àẛ/",
+"expected": "a"
+},
+{
+"input": "क़ÅÅéł",
+"expected": "aae"
+},
+{
+"input": "中́-/’9!X",
+"expected": "9 x"
+},
+{
+"input": "ẛøक0中1éZ-'",
+"expected": "0 1ez"
+},
+{
+"input": "ﬁ ̀Z.Åæ",
+"expected": "z a"
+},
+{
+"input": "b́Xİﬁø,łZø.bñ0",
+"expected": "bxi z bn0"
+},
+{
+"input": "ß 9céẛ9ẛÅ—aZb",
+"expected": "9ce 9 a azb"
+},
+{
+"input": "_ क’",
+"expected": ""
+},
+{
+"input": "̀1é,À1X,",
+"expected": "1e a1x"
+},
+{
+"input": "—ÅY1Ĳ’",
+"expected": "ay1"
+},
+{
+"input": "bﬁक़, é̀a",
+"expected": "b ea"
+},
+{
+"input": "æ,क़́&Z中øY",
+"expected": "and z y"
+},
+{
+"input": "アﬁﬁकbłẛc",
+"expected": "b c"
+},
+{
+"input": "łø!bæYæ,0µ",
+"expected": "b y 0"
+},
+{
+"input": "ß9cæアß&Åẛ&9",
+"expected": "9c and a and 9"
+},
+{
+"input": "Å",
+"expected": "a"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "/c/c",
+"expected": "c c"
+},
+{
+"input": "Àﬁİアẛ",
+"expected": "a i"
+},
+{
+"input": "c/éæ",
+"expected": "c e"
+},
+{
+"input": "Xß'1ø̀İÅłß&ĲĲ",
+"expected": "x 1 ia and"
+},
+{
+"input": "中'Z̀Z",
+"expected": "zz"
+},
+{
+"input": "’&アéñ0",
+"expected": "and en0"
+},
+{
+"input": "ñ",
+"expected": "n"
+},
+{
+"input": "éÀÅ’̀-ÅæÅc",
+"expected": "eaa a ac"
+},
+{
+"input": "æ—̀'XYİøﬁ-b",
+"expected": "xyi b"
+},
+{
+"input": "’Å",
+"expected": "a"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "Y,",
+"expected": "y"
+},
+{
+"input": "øøłक़c’ ÅøøÅY",
+"expected": "c a ay"
+},
+{
+"input": "9中øİñ',1b",
+"expected": "9 in 1b"
+},
+{
+"input": "&Ĳ中łक1!!Å_—",
+"expected": "and 1 a"
+},
+{
+"input": "Ĳ/19",
+"expected": "19"
+},
+{
+"input": "YÅ&ÅZñæYकアéÀ-",
+"expected": "ya and azn y ea"
+},
+{
+"input": "&øﬁ.1/9,Ĳbø",
+"expected": "and 1 9 b"
+},
+{
+"input": "क़øÅक9—ZY",
+"expected": "a 9 zy"
+},
+{
+"input": "İẛ中́",
+"expected": "i"
+},
+{
+"input": "́क़Y9ñYÅÅ中æ9क",
+"expected": "y9nyaa 9"
+},
+{
+"input": "µ&9̀ﬁX1中 À",
+"expected": "and 9 x1 a"
+},
+{
+"input": "-ñ",
+"expected": "n"
+},
+{
+"input": ".æ中éZ!/क'9À—アZ",
+"expected": "ez 9a z"
+},
+{
+"input": "-µµ -—’ß",
+"expected": ""
+},
+{
+"input": "क़cbZcक़!_क़́—bĲ",
+"expected": "cbzc b"
+},
+{
+"input": "アéÀẛ,İÀÅYX-Ǻẛ",
+"expected": "ea iaayx a"
+},
+{
+"input": "_ß’ ññæ",
+"expected": "nn"
+},
+{
+"input": "9øﬁक0ñ",
+"expected": "9 0n"
+},
+{
+"input": "Å1'",
+"expected": "a1"
+},
+{
+"input": ", 0Xéł—",
+"expected": "0xe"
+},
+{
+"input": ",-ñक़ñ/",
+"expected": "n n"
+},
+{
+"input": "-ĲﬁÅĲÀĲbZİﬁÅ",
+"expected": "a a bzi a"
+},
+{
+"input": "_µæ",
+"expected": ""
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "Ĳ’ẛé",
+"expected": "e"
+},
+{
+"input": "a0̀9!øİø",
+"expected": "a09 i"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "Xक़क/øक",
+"expected": "x"
+},
+{
+"input": "YłﬁÅ",
+"expected": "y a"
+},
+{
+"input": "क'——190İøßकø",
+"expected": "190i"
+},
+{
+"input": " /’ﬁİﬁccc9ßẛ",
+"expected": "i ccc9"
+},
+{
+"input": "Å ’ﬁ9ñ—ñ",
+"expected": "a 9n n"
+},
+{
+"input": "İ—",
+"expected": "i"
+},
+{
+"input": "ÀµßﬁﬁアĲक़Àẛb",
+"expected": "a a b"
+},
+{
+"input": "ß1́µÀ",
+"expected": "1 a"
+},
+{
+"input": "b’ẛ!µक़.Xµẛ-中",
+"expected": "b x"
+},
+{
+"input": "—ł ,cक़1/bÅ",
+"expected": "c 1 ba"
+},
+{
+"input": "́ ́_́",
+"expected": ""
+},
+{
+"input": "—ẛX9中_कñ",
+"expected": "x9 n"
+},
+{
+"input": "ẛ中łñ&Åアßアæ",
+"expected": "n and a"
+},
+{
+"input": "!—ẛ/,'कÀ.À",
+"expected": "a a"
+},
+{
+"input": "é_Ĳñẛæक'é1क़ア",
+"expected": "e n e1"
+},
+{
+"input": "İæ écé",
+"expected": "i ece"
+},
+{
+"input": "ZæÅ!ẛ_/ア'क'",
+"expected": "z a"
+},
+{
+"input": "0—",
+"expected": "0"
+},
+{
+"input": "µ,,X中..X0́ß",
+"expected": "x x0"
+},
+{
+"input": "ẛ09aक-́ẛẛ/é",
+"expected": "09a e"
+},
+{
+"input": "éXZक़.",
+"expected": "exz"
+},
+{
+"input": "c&́&cİĲ&",
+"expected": "c and and ci and"
+},
+{
+"input": "écaÀक़’0ßéÅア中Ĳ9",
+"expected": "ecaa 0 ea 9"
+},
+{
+"input": "ﬁÅ'/1ß-Å!&aßé",
+"expected": "a 1 a and a e"
+},
+{
+"input": "/&—İ̀ﬁñZİ",
+"expected": "and i nzi"
+},
+{
+"input": "0&9ẛñ,a!ł,",
+"expected": "0 and 9 n a"
+},
+{
+"input": "'ßÀµक़a!",
+"expected": "a a"
+},
+{
+"input": "ø,X1ÅÀ-İﬁÀ",
+"expected": "x1aa i a"
+},
+{
+"input": "1éø—..9ẛ Å’",
+"expected": "1e 9 a"
+},
+{
+"input": "́कẛア_",
+"expected": ""
+},
+{
+"input": ",’Z中Å中øYक़1Xक",
+"expected": "z a y 1x"
+},
+{
+"input": "ﬁ/क़ア -ñ中Å1_µĲZ",
+"expected": "n a1 z"
+},
+{
+"input": "ﬁÅXÅ9ﬁ́Åक़XकÅÀb",
+"expected": "axa9 a x aab"
+},
+{
+"input": "!a_µYc",
+"expected": "a yc"
+},
+{
+"input": "æYアXYẛ",
+"expected": "y xy"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "́&9́",
+"expected": "and 9"
+},
+{
+"input": "łÅłłZ",
+"expected": "a z"
+},
+{
+"input": "ア9æ1&アİ中9.",
+"expected": "9 1 and i 9"
+},
+{
+"input": "abÀÅア̀アł.,Åæ ",
+"expected": "abaa a"
+},
+{
+"input": "/1ć",
+"expected": "1c"
+},
+{
+"input": "b,_Y0’cÅ’",
+"expected": "b y0 ca"
+},
+{
+"input": "X,cİÅ.ア_X9",
+"expected": "x cia x9"
+},
+{
+"input": "é.क़ñक़’ñ,",
+"expected": "e n n"
+},
+{
+"input": " 中.́",
+"expected": ""
+},
+{
+"input": "'Xकµ",
+"expected": "x"
+},
+{
+"input": "&̀कĲXæł中ñ́́ Àł",
+"expected": "and x n a"
+},
+{
+"input": "アẛ",
+"expected": ""
+},
+{
+"input": ".À ",
+"expected": "a"
+},
+{
+"input": "ÅXक́́क中9ł,!_",
+"expected": "ax 9"
+},
+{
+"input": "ZÅøZア",
+"expected": "za z"
+},
+{
+"input": "/X'ł’’cY/µक",
+"expected": "x cy"
+},
+{
+"input": "ẛ_ß",
+"expected": ""
+},
+{
+"input": "a_/1",
+"expected": "a 1"
+},
+{
+"input": "ẛ,’_İ,कñéłÅ",
+"expected": "i ne a"
+},
+{
+"input": "æÀ!øﬁĲÅ0",
+"expected": "a a0"
+},
+{
+"input": "ẛñ_øñ́cक़. b!",
+"expected": "n nc b"
+},
+{
+"input": "µµ́é /ß.",
+"expected": "e"
+},
+{
+"input": "क़,Ĳकß!",
+"expected": ""
+},
+{
+"input": "ĲĲÅ-æ-9アĲ&アX",
+"expected": "a 9 and x"
+},
+{
+"input": "cYXá9.Y",
+"expected": "cyxa9 y"
+},
+{
+"input": " a_ﬁÅøX——ẛĲ",
+"expected": "a a x"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "क́ab中'アé",
+"expected": "ab e"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "̀&00中 ,/",
+"expected": "and 00"
+},
+{
+"input": "中!æ'İZøİÅ",
+"expected": "iz ia"
+},
+{
+"input": ",.ÀZcZİłł",
+"expected": "azczi"
+},
+{
+"input": "ẛXa-ZĲ̀ß",
+"expected": "xa z"
+},
+{
+"input": "0中c._क़ẛ'c",
+"expected": "0 c c"
+},
+{
+"input": "Y'アक़c&ñb_µ İYÀ",
+"expected": "y c and nb iya"
+},
+{
+"input": "क़,",
+"expected": ""
+},
+{
+"input": "łアßł9ZﬁæX",
+"expected": "9z x"
+},
+{
+"input": "̀",
+"expected": ""
+},
+{
+"input": "Yß’",
+"expected": "y"
+},
+{
+"input": "—’İñb'ÅĲ.æकł",
+"expected": "inb a"
+},
+{
+"input": "&µłZ—é",
+"expected": "and z e"
+},
+{
+"input": ",YZ' ł łñø0Z",
+"expected": "yz n 0z"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "Åø'0",
+"expected": "a 0"
+},
+{
+"input": "Z&",
+"expected": "z and"
+},
+{
+"input": "Åककﬁ́0",
+"expected": "a 0"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "æ",
+"expected": ""
+},
+{
+"input": "Z’’ñłaé́",
+"expected": "z n ae"
+},
+{
+"input": "Zक,क़中-",
+"expected": "z"
+},
+{
+"input": "ł-9'À'Ĳ Y-",
+"expected": "9 a y"
+},
+{
+"input": "'́ÀẛYø",
+"expected": "a y"
+},
+{
+"input": ",Ĳ’—",
+"expected": ""
+},
+{
+"input": "Å09",
+"expected": "a09"
+},
+{
+"input": "aİß—",
+"expected": "ai"
+},
+{
+"input": "ßÅß̀’9",
+"expected": "a 9"
+},
+{
+"input": "ñ’/ẛ",
+"expected": "n"
+},
+{
+"input": "&İñéĲ",
+"expected": "and ine"
+},
+{
+"input": ",ñł'İø1क़/",
+"expected": "n i 1"
+},
+{
+"input": "ア&कbÅ_ÅéY",
+"expected": "and ba aey"
+},
+{
+"input": "́Ĳ9À,! ̀łYÅ’ẛ",
+"expected": "9a ya"
+},
+{
+"input": "İアﬁ́アcøア’",
+"expected": "i c"
+},
+{
+"input": "Z0,æ-—cक़İß",
+"expected": "z0 c i"
+},
+{
+"input": "̀0a0!.ﬁ中कµक़.",
+"expected": "0a0"
+},
+{
+"input": "øİÅµﬁ æ",
+"expected": "ia"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "0é́Z1 æ",
+"expected": "0ez1"
+},
+{
+"input": "ßÅ_中",
+"expected": "a"
+},
+{
+"input": "æẛ0ÅÅñY",
+"expected": "0aany"
+},
+{
+"input": "c1bß",
+"expected": "c1b"
+},
+{
+"input": "0-,中&क-ßक̀",
+"expected": "0 and"
+},
+{
+"input": ".İ&&̀İb",
+"expected": "i and and ib"
+},
+{
+"input": "—/Åµ̀ła__'Y",
+"expected": "a a y"
+},
+{
+"input": "0ア&øñ/Å1!",
+"expected": "0 and n a1"
+},
+{
+"input": "Ĳ中ñ’ł—İµ1æ",
+"expected": "n i 1"
+},
+{
+"input": "Å—&À—",
+"expected": "a and a"
+},
+{
+"input": "Z9ñ1,À1&ø",
+"expected": "z9n1 a1 and"
+},
+{
+"input": " ﬁł́’9क़ł̀&Ĳ",
+"expected": "9 and"
+},
+{
+"input": "ア&क-Ĳé9&ñÅ",
+"expected": "and e9 and na"
+},
+{
+"input": "XæaĲ9/łकﬁ",
+"expected": "x a 9"
+},
+{
+"input": "Ĳ́Ĳ́ÅĲ-Zक़b",
+"expected": "a z b"
+},
+{
+"input": ".éc'.アé-Åक़Ĳक",
+"expected": "ec e a"
+},
+{
+"input": "1क़1'アøアc",
+"expected": "1 1 c"
+},
+{
+"input": "Åア_̀0,ÀcÅ!æZ",
+"expected": "a 0 aca z"
+},
+{
+"input": "1,_µæ—̀",
+"expected": "1"
+},
+{
+"input": "—9",
+"expected": "9"
+},
+{
+"input": "__Xक़æア'’ア-ñé",
+"expected": "x ne"
+},
+{
+"input": "क़'ﬁ0",
+"expected": "0"
+},
+{
+"input": "́X",
+"expected": "x"
+},
+{
+"input": "99, ",
+"expected": "99"
+},
+{
+"input": "ñ,İĲ क़'́łÅY",
+"expected": "n i ay"
+},
+{
+"input": "Zİﬁ'øÅĲñµa",
+"expected": "zi a n a"
+},
+{
+"input": "ZÅæYアİ_̀_Ĳ'ñé",
+"expected": "za y i ne"
+},
+{
+"input": "कक़9क़Ĳ",
+"expected": "9"
+},
+{
+"input": "ßXc0Åb1-ÅÅà",
+"expected": "xc0ab1 aaa"
+},
+{
+"input": "9À-",
+"expected": "9a"
+},
+{
+"input": "'Zø!Zø-XİÀ.̀Z",
+"expected": "z z xia z"
+},
+{
+"input": "0a_ẛY9µ.中Åa",
+"expected": "0a y9 aa"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "ß1̀9ẛY.łZ00",
+"expected": "19 y z00"
+},
+{
+"input": "øÀ9ł9",
+"expected": "a9 9"
+},
+{
+"input": " Y中क़a—-Åæ_",
+"expected": "y a a"
+},
+{
+"input": " ́—Å_Z091µ",
+"expected": "a z091"
+},
+{
+"input": "łæ̀ñ9,'Z,क’",
+"expected": "n9 z"
+},
+{
+"input": "’ébÀ_中’ﬁ/",
+"expected": "eba"
+},
+{
+"input": "İéX,Ĳł1,Ĳ’Y",
+"expected": "iex 1 y"
+},
+{
+"input": "aøñ9łक़́ø",
+"expected": "a n9"
+},
+{
+"input": "&ẛYbµYa!",
+"expected": "and yb ya"
+},
+{
+"input": "cXİ",
+"expected": "cxi"
+},
+{
+"input": "éﬁ́̀İZアア",
+"expected": "e iz"
+},
+{
+"input": " 'ZÀZﬁ_ ア",
+"expected": "zaz"
+},
+{
+"input": "İµYÀ̀",
+"expected": "i ya"
+},
+{
+"input": ",X,Z̀1Å—’XÀ",
+"expected": "x z1a xa"
+},
+{
+"input": "&1a9a-Ĳæ中中",
+"expected": "and 1a9a"
+},
+{
+"input": "!-ø9'1bß̀'中Y",
+"expected": "9 1b y"
+},
+{
+"input": "क़YĲÅ",
+"expected": "y a"
+},
+{
+"input": "øXĲक़-ø-!",
+"expected": "x"
+},
+{
+"input": "0क़1.ﬁaca,cẛø",
+"expected": "0 1 aca c"
+},
+{
+"input": " &cक́.",
+"expected": "and c"
+},
+{
+"input": ",́ñ'Y",
+"expected": "n y"
+},
+{
+"input": "ø1ﬁX&.中cİ",
+"expected": "1 x and ci"
+},
+{
+"input": "Å",
+"expected": "a"
+},
+{
+"input": "éÀñZकÅaø/éक़À—",
+"expected": "eanz aa e a"
+},
+{
+"input": "Åøµ",
+"expected": "a"
+},
+{
+"input": "/ア, áb",
+"expected": "ab"
+},
+{
+"input": "アæa",
+"expected": "a"
+},
+{
+"input": "ałÀ0_",
+"expected": "a a0"
+},
+{
+"input": ",́ĲX 'Zc",
+"expected": "x zc"
+},
+{
+"input": ".中́øÅZµ0ﬁ9İYµक़",
+"expected": "az 0 9iy"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "9,é!ñİ",
+"expected": "9 e ni"
+},
+{
+"input": "ññÅ'.Y/9µ0 ",
+"expected": "nna y 9 0"
+},
+{
+"input": "-",
+"expected": ""
+},
+{
+"input": "Åñ́1アæ_",
+"expected": "an1"
+},
+{
+"input": "ÀÅ!1Z-À",
+"expected": "aa 1z a"
+},
+{
+"input": "’c_ñ Z,æİﬁXÀ!",
+"expected": "c n z i xa"
+},
+{
+"input": "&bİÅकक,0Å091a",
+"expected": "and bia 0a091a"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": ".9/İøZµµ!YbY/",
+"expected": "9 i z yby"
+},
+{
+"input": "Å9Zß1cÅX-क़̀İĲb",
+"expected": "a9z 1cax i b"
+},
+{
+"input": "̀&æ_&'",
+"expected": "and and"
+},
+{
+"input": "Å c—",
+"expected": "a c"
+},
+{
+"input": "—,éĲ́कẛXZ",
+"expected": "e xz"
+},
+{
+"input": "ł9́/",
+"expected": "9"
+},
+{
+"input": "中,アbłæẛアĲæ",
+"expected": "b"
+},
+{
+"input": "क़ﬁñł'&bñ’.b'Xẛ",
+"expected": "n and bn b x"
+},
+{
+"input": "æµ.-0,,'",
+"expected": "0"
+},
+{
+"input": "X.क़łæ&&,",
+"expected": "x and and"
+},
+{
+"input": "ñæµbæक़क़ क़",
+"expected": "n b"
+},
+{
+"input": "ĲアÀ",
+"expected": "a"
+},
+{
+"input": "Ĳc",
+"expected": "c"
+},
+{
+"input": "X",
+"expected": "x"
+},
+{
+"input": "’.b",
+"expected": "b"
+},
+{
+"input": "ẛaß—/9ß&",
+"expected": "a 9 and"
+},
+{
+"input": "ñXb µ 1中øYøİµ0",
+"expected": "nxb 1 y i 0"
+},
+{
+"input": "Àñ9-̀",
+"expected": "an9"
+},
+{
+"input": "Ĳñ&क—æ.µ&łÀé",
+"expected": "n and and ae"
+},
+{
+"input": "&a",
+"expected": "and a"
+},
+{
+"input": "क़İक़c&’ñ—.क़0",
+"expected": "i c and n 0"
+},
+{
+"input": "Ĳ ßY,æñ-ZßÅa!_",
+"expected": "y n z aa"
+},
+{
+"input": "Yæ!",
+"expected": "y"
+},
+{
+"input": "0aXłǺ-́Ĳłæア",
+"expected": "0ax a"
+},
+{
+"input": "0ẛक़.-Å",
+"expected": "0 a"
+},
+{
+"input": "c",
+"expected": "c"
+},
+{
+"input": "bñ!0",
+"expected": "bn 0"
+},
+{
+"input": "ß",
+"expected": ""
+},
+{
+"input": "ł-",
+"expected": ""
+},
+{
+"input": "YकZß’—ẛb̀-’",
+"expected": "y z b"
+},
+{
+"input": "̀-X0ß_/́कア!éÀ,",
+"expected": "x0 ea"
+},
+{
+"input": "X",
+"expected": "x"
+},
+{
+"input": "क़कĲ Xø",
+"expected": "x"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "Zé’ẛ/0",
+"expected": "ze 0"
+},
+{
+"input": "",
+"expected": ""
+},
+{
+"input": "-éZ",
+"expected": "ez"
+},
+{
+"input": "1ÀİẛĲ!Z",
+"expected": "1ai z"
+},
+{
+"input": "アł&øłø&Åc!",
+"expected": "and and ac"
+},
+{
+"input": "Å!.'क़X ",
+"expected": "a x"
+},
+{
+"input": "0Zæア́µ.कXł中́",
+"expected": "0z x"
+},
+{
+"input": "ẛक़,ẛÀZİc",
+"expected": "azic"
+},
+{
+"input": "क़中क़— 1Å&",
+"expected": "1a and"
+},
+{
+"input": "_/",
+"expected": ""
+},
+{
+"input": "c̀",
+"expected": "c"
+},
+{
+"input": "̀",
+"expected": ""
+},
+{
+"input": " ’!",
+"expected": ""
+},
+{
+"input": "YZłकİ",
+"expected": "yz i"
+},
+{
+"input": "ñ'中Åa—µ中",
+"expected": "n aa"
+},
+{
+"input": "́1́  क़µµ00क़0",
+"expected": "1 00 0"
+},
+{
+"input": "éアǽ!łĲक़’ẛc&",
+"expected": "e c and"
+}
+]
+}

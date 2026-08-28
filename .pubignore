@@ -1,0 +1,29 @@
+# `.pubignore` replaces `.gitignore` for `dart pub publish`, so the build
+# artefacts have to be listed again here or they end up in the archive --
+# `build/` alone is 77 MB of test caches and a duplicate copy of the assets.
+.dart_tool/
+.pub-cache/
+.pub/
+build/
+pubspec.lock
+
+# Keep the published archive lean: only the library, the SVG assets, the
+# example sources and the licensing paperwork ship to pub.dev.
+.github/
+docs/
+tool/
+*.png
+
+# The example ships as source; its generated platform folders do not.
+example/.dart_tool/
+example/android/
+example/build/
+example/ios/
+example/linux/
+example/macos/
+example/web/
+example/windows/
+example/pubspec.lock
+
+# Internal contract for the port, not useful to consumers.
+CLAUDE.md

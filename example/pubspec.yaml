@@ -1,0 +1,24 @@
+name: workout_flutter_guide_example
+description: >-
+  Gallery app for workout_flutter_guide: search, filters, animated exercise
+  detail, and an About screen that credits the artwork properly.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  workout_flutter_guide:
+    path: ../
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
