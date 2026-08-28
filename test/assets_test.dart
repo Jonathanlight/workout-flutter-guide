@@ -64,8 +64,11 @@ void main() {
         expect(head, startsWith('<svg '), reason: frame.assetPath);
         expect(head, contains('width="512"'), reason: frame.assetPath);
         expect(head, contains('height="512"'), reason: frame.assetPath);
-        expect(head, contains('viewBox="0 0 512 512"'),
-            reason: frame.assetPath);
+        expect(
+          head,
+          contains('viewBox="0 0 512 512"'),
+          reason: frame.assetPath,
+        );
       }
     }
   });

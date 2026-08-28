@@ -94,7 +94,8 @@ String _renderCatalog(List<Map<String, Object?>> exercises) {
     ..writeln("  creatorUrl: 'https://bryllim.com',")
     ..writeln("  license: 'CC BY-SA 4.0',")
     ..writeln(
-        "  licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',")
+      "  licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',",
+    )
     ..writeln(');');
 
   // Emit one constant per distinct upstream source, in first-seen order.

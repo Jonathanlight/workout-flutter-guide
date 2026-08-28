@@ -51,7 +51,9 @@ void main() {
       ExerciseFrameImage(exercise: pushUp, size: 64, bundle: bundle),
     );
     expect(
-        tester.widget<SvgPicture>(find.byType(SvgPicture)).colorFilter, isNull);
+      tester.widget<SvgPicture>(find.byType(SvgPicture)).colorFilter,
+      isNull,
+    );
 
     await pumpImage(
       tester,
