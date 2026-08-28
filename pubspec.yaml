@@ -1,0 +1,350 @@
+name: workout_flutter_guide
+description: >-
+  302 exercises with 906 offline SVG frames, a typed catalog with search and
+  filters, and ready-to-use Flutter widgets. Community port of
+  @bryllim/workout-guide.
+version: 0.1.0
+repository: https://github.com/Jonathanlight/workout-flutter-guide
+issue_tracker: https://github.com/Jonathanlight/workout-flutter-guide/issues
+
+topics:
+  - fitness
+  - exercise
+  - workout
+  - svg
+  - illustrations
+
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  web:
+  windows:
+
+environment:
+  sdk: ^3.5.0
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.0.10
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+  path: ^1.9.0
+  xml: ^7.0.0
+
+# GENERATED ASSETS BLOCK -- DO NOT EDIT BY HAND.
+# Run `dart run tool/generate_catalog.dart` to regenerate everything between
+# the BEGIN and END markers below.
+flutter:
+  assets:
+    # BEGIN GENERATED ASSETS
+    - assets/manifest.json
+    - assets/exercises/ab-wheel/
+    - assets/exercises/active-hang/
+    - assets/exercises/archer-push-up/
+    - assets/exercises/arm-circles/
+    - assets/exercises/arnold-press/
+    - assets/exercises/assault-bike/
+    - assets/exercises/assisted-chin-up/
+    - assets/exercises/assisted-dip/
+    - assets/exercises/assisted-pistol-squat/
+    - assets/exercises/assisted-pull-up/
+    - assets/exercises/back-extension/
+    - assets/exercises/band-pull-apart/
+    - assets/exercises/banded-clamshell/
+    - assets/exercises/banded-dead-bug/
+    - assets/exercises/banded-donkey-kick/
+    - assets/exercises/banded-face-pull/
+    - assets/exercises/banded-fire-hydrant/
+    - assets/exercises/banded-frog-pump/
+    - assets/exercises/banded-glute-bridge/
+    - assets/exercises/banded-hip-thrust/
+    - assets/exercises/banded-kickback/
+    - assets/exercises/banded-lat-pulldown/
+    - assets/exercises/banded-lateral-walk/
+    - assets/exercises/banded-monster-walk/
+    - assets/exercises/banded-pallof-press/
+    - assets/exercises/banded-row/
+    - assets/exercises/banded-seated-hip-abduction/
+    - assets/exercises/banded-squat/
+    - assets/exercises/banded-standing-hip-abduction/
+    - assets/exercises/banded-woodchop/
+    - assets/exercises/barbell-glute-bridge/
+    - assets/exercises/barbell-row/
+    - assets/exercises/battle-ropes/
+    - assets/exercises/bear-crawl/
+    - assets/exercises/bear-plank/
+    - assets/exercises/belt-squat/
+    - assets/exercises/bench-dip/
+    - assets/exercises/bench-press/
+    - assets/exercises/bent-over-rear-delt-raise/
+    - assets/exercises/bicep-curl/
+    - assets/exercises/bicycle-crunch/
+    - assets/exercises/bird-dog/
+    - assets/exercises/bodyweight-squat/
+    - assets/exercises/bulgarian-split-squat/
+    - assets/exercises/burpee/
+    - assets/exercises/butterfly-stretch/
+    - assets/exercises/cable-crunch/
+    - assets/exercises/cable-curl/
+    - assets/exercises/cable-fly/
+    - assets/exercises/cable-front-raise/
+    - assets/exercises/cable-kickback/
+    - assets/exercises/cable-lateral-raise/
+    - assets/exercises/cable-pallof-hold/
+    - assets/exercises/cable-pull-through/
+    - assets/exercises/cable-rear-delt-fly/
+    - assets/exercises/cable-standing-hip-abduction/
+    - assets/exercises/cable-standing-hip-adduction/
+    - assets/exercises/cable-woodchop/
+    - assets/exercises/calf-raise/
+    - assets/exercises/captains-chair-knee-raise/
+    - assets/exercises/cat-cow-stretch/
+    - assets/exercises/chair-dip/
+    - assets/exercises/chest-dip/
+    - assets/exercises/chest-supported-row/
+    - assets/exercises/childs-pose/
+    - assets/exercises/chin-up/
+    - assets/exercises/clamshell/
+    - assets/exercises/close-grip-bench-press/
+    - assets/exercises/close-grip-lat-pulldown/
+    - assets/exercises/commando-pull-up/
+    - assets/exercises/concentration-curl/
+    - assets/exercises/copenhagen-plank/
+    - assets/exercises/cossack-squat/
+    - assets/exercises/crab-walk/
+    - assets/exercises/cross-body-shoulder-stretch/
+    - assets/exercises/crunch/
+    - assets/exercises/curtsy-lunge/
+    - assets/exercises/cycling/
+    - assets/exercises/dead-bug/
+    - assets/exercises/dead-hang/
+    - assets/exercises/deadlift/
+    - assets/exercises/decline-bench-press/
+    - assets/exercises/decline-dumbbell-press/
+    - assets/exercises/decline-push-up/
+    - assets/exercises/decline-sit-up/
+    - assets/exercises/deficit-reverse-lunge/
+    - assets/exercises/diamond-push-up/
+    - assets/exercises/dip/
+    - assets/exercises/donkey-calf-raise/
+    - assets/exercises/donkey-kick/
+    - assets/exercises/doorway-chest-stretch/
+    - assets/exercises/doorway-row/
+    - assets/exercises/drag-curl/
+    - assets/exercises/dragon-flag/
+    - assets/exercises/dumbbell-bench-press/
+    - assets/exercises/dumbbell-bent-over-row/
+    - assets/exercises/dumbbell-curtsy-lunge/
+    - assets/exercises/dumbbell-fly/
+    - assets/exercises/dumbbell-glute-bridge/
+    - assets/exercises/dumbbell-hip-thrust/
+    - assets/exercises/dumbbell-lateral-lunge/
+    - assets/exercises/dumbbell-overhead-tricep-extension/
+    - assets/exercises/dumbbell-romanian-deadlift/
+    - assets/exercises/dumbbell-shrug/
+    - assets/exercises/dumbbell-side-bend/
+    - assets/exercises/dumbbell-skull-crusher/
+    - assets/exercises/dumbbell-sumo-deadlift/
+    - assets/exercises/dumbbell-sumo-squat/
+    - assets/exercises/elliptical/
+    - assets/exercises/explosive-push-up/
+    - assets/exercises/ez-bar-curl/
+    - assets/exercises/face-pull/
+    - assets/exercises/farmer-carry/
+    - assets/exercises/fast-feet/
+    - assets/exercises/feet-elevated-pike-push-up/
+    - assets/exercises/fire-hydrant/
+    - assets/exercises/flutter-kick/
+    - assets/exercises/forward-lunge/
+    - assets/exercises/frog-pump/
+    - assets/exercises/front-foot-elevated-split-squat/
+    - assets/exercises/front-raise/
+    - assets/exercises/front-squat/
+    - assets/exercises/glute-bridge/
+    - assets/exercises/glute-bridge-march/
+    - assets/exercises/glute-focused-back-extension/
+    - assets/exercises/goblet-squat/
+    - assets/exercises/good-morning/
+    - assets/exercises/hack-squat/
+    - assets/exercises/half-burpee/
+    - assets/exercises/half-kneeling-pallof-press/
+    - assets/exercises/hammer-curl/
+    - assets/exercises/hamstring-stretch/
+    - assets/exercises/handstand-push-up/
+    - assets/exercises/hanging-knee-raise/
+    - assets/exercises/hanging-leg-raise/
+    - assets/exercises/heel-elevated-goblet-squat/
+    - assets/exercises/heel-tap/
+    - assets/exercises/high-knees/
+    - assets/exercises/hiking/
+    - assets/exercises/hindu-push-up/
+    - assets/exercises/hip-abduction-machine/
+    - assets/exercises/hip-adduction-machine/
+    - assets/exercises/hip-airplane/
+    - assets/exercises/hip-thrust/
+    - assets/exercises/hollow-body-hold/
+    - assets/exercises/hollow-rock/
+    - assets/exercises/inchworm/
+    - assets/exercises/incline-bench-press/
+    - assets/exercises/incline-cable-fly/
+    - assets/exercises/incline-dumbbell-curl/
+    - assets/exercises/incline-dumbbell-press/
+    - assets/exercises/incline-push-up/
+    - assets/exercises/inverted-row/
+    - assets/exercises/jump-rope/
+    - assets/exercises/jump-squat/
+    - assets/exercises/jumping-jack/
+    - assets/exercises/kettlebell-romanian-deadlift/
+    - assets/exercises/kettlebell-swing/
+    - assets/exercises/knee-push-up/
+    - assets/exercises/kneeling-hip-flexor-stretch/
+    - assets/exercises/l-sit-hold/
+    - assets/exercises/l-sit-pull-up/
+    - assets/exercises/landmine-press/
+    - assets/exercises/landmine-romanian-deadlift/
+    - assets/exercises/landmine-squat/
+    - assets/exercises/lat-pulldown/
+    - assets/exercises/lateral-lunge/
+    - assets/exercises/lateral-raise/
+    - assets/exercises/lateral-shuffle/
+    - assets/exercises/leg-curl/
+    - assets/exercises/leg-extension/
+    - assets/exercises/leg-press/
+    - assets/exercises/leg-press-calf-raise/
+    - assets/exercises/leg-swings-stretch/
+    - assets/exercises/lying-hamstring-walkout/
+    - assets/exercises/lying-leg-curl/
+    - assets/exercises/lying-leg-raise/
+    - assets/exercises/machine-chest-press/
+    - assets/exercises/machine-glute-kickback/
+    - assets/exercises/machine-lateral-raise/
+    - assets/exercises/machine-row/
+    - assets/exercises/machine-shoulder-press/
+    - assets/exercises/meadows-row/
+    - assets/exercises/mountain-climber/
+    - assets/exercises/negative-pull-up/
+    - assets/exercises/neutral-grip-pull-up/
+    - assets/exercises/nordic-hamstring-curl/
+    - assets/exercises/one-arm-dumbbell-row/
+    - assets/exercises/overhead-press/
+    - assets/exercises/overhead-tricep-extension/
+    - assets/exercises/pallof-press/
+    - assets/exercises/pec-deck/
+    - assets/exercises/pendlay-row/
+    - assets/exercises/pike-push-up/
+    - assets/exercises/pistol-squat/
+    - assets/exercises/plank/
+    - assets/exercises/plank-jack/
+    - assets/exercises/plank-shoulder-tap/
+    - assets/exercises/plate-front-raise/
+    - assets/exercises/preacher-curl/
+    - assets/exercises/prone-t-raise/
+    - assets/exercises/prone-y-raise/
+    - assets/exercises/pull-up/
+    - assets/exercises/push-press/
+    - assets/exercises/push-up/
+    - assets/exercises/push-up-shoulder-tap/
+    - assets/exercises/rack-pull/
+    - assets/exercises/rear-delt-fly/
+    - assets/exercises/reverse-crunch/
+    - assets/exercises/reverse-curl/
+    - assets/exercises/reverse-hyperextension/
+    - assets/exercises/reverse-lunge/
+    - assets/exercises/reverse-pec-deck/
+    - assets/exercises/reverse-snow-angel/
+    - assets/exercises/romanian-deadlift/
+    - assets/exercises/rope-hammer-curl/
+    - assets/exercises/rope-tricep-pushdown/
+    - assets/exercises/rowing/
+    - assets/exercises/running/
+    - assets/exercises/russian-twist/
+    - assets/exercises/scapular-pull-up/
+    - assets/exercises/scapular-push-up/
+    - assets/exercises/seal-jack/
+    - assets/exercises/seated-calf-raise/
+    - assets/exercises/seated-dumbbell-press/
+    - assets/exercises/seated-forward-fold-stretch/
+    - assets/exercises/seated-knee-tuck/
+    - assets/exercises/seated-leg-curl/
+    - assets/exercises/seated-row/
+    - assets/exercises/shrimp-squat/
+    - assets/exercises/shrug/
+    - assets/exercises/side-lying-hip-abduction/
+    - assets/exercises/side-lying-leg-raise/
+    - assets/exercises/side-plank/
+    - assets/exercises/side-plank-hip-dip/
+    - assets/exercises/single-arm-cable-row/
+    - assets/exercises/single-arm-dumbbell-tricep-extension/
+    - assets/exercises/single-dumbbell-skullcrusher/
+    - assets/exercises/single-leg-box-squat/
+    - assets/exercises/single-leg-calf-raise/
+    - assets/exercises/single-leg-glute-bridge/
+    - assets/exercises/single-leg-romanian-deadlift/
+    - assets/exercises/sissy-squat/
+    - assets/exercises/skater-hop/
+    - assets/exercises/skater-squat/
+    - assets/exercises/skierg/
+    - assets/exercises/skull-crusher/
+    - assets/exercises/smith-machine-bench-press/
+    - assets/exercises/smith-machine-bulgarian-split-squat/
+    - assets/exercises/smith-machine-hip-thrust/
+    - assets/exercises/smith-machine-reverse-lunge/
+    - assets/exercises/smith-machine-romanian-deadlift/
+    - assets/exercises/smith-machine-split-squat/
+    - assets/exercises/smith-machine-squat/
+    - assets/exercises/spider-curl/
+    - assets/exercises/split-squat/
+    - assets/exercises/sprawl/
+    - assets/exercises/squat/
+    - assets/exercises/squat-thrust/
+    - assets/exercises/stability-ball-hamstring-curl/
+    - assets/exercises/stair-climber/
+    - assets/exercises/standing-calf-raise/
+    - assets/exercises/standing-dumbbell-press/
+    - assets/exercises/standing-quad-stretch/
+    - assets/exercises/step-down/
+    - assets/exercises/step-up/
+    - assets/exercises/straight-arm-pulldown/
+    - assets/exercises/sumo-deadlift/
+    - assets/exercises/superman/
+    - assets/exercises/superman-hold/
+    - assets/exercises/swimming/
+    - assets/exercises/t-bar-row/
+    - assets/exercises/toe-touch/
+    - assets/exercises/torso-twist-stretch/
+    - assets/exercises/towel-hamstring-curl/
+    - assets/exercises/towel-pull-up/
+    - assets/exercises/towel-row/
+    - assets/exercises/trap-bar-deadlift/
+    - assets/exercises/treadmill-incline-walk/
+    - assets/exercises/tricep-kickback/
+    - assets/exercises/tricep-pushdown/
+    - assets/exercises/typewriter-push-up/
+    - assets/exercises/upright-row/
+    - assets/exercises/v-up/
+    - assets/exercises/walking/
+    - assets/exercises/walking-lunge/
+    - assets/exercises/wall-calf-stretch/
+    - assets/exercises/wall-handstand-push-up/
+    - assets/exercises/wall-push-up/
+    - assets/exercises/wall-sit/
+    - assets/exercises/wall-walk/
+    - assets/exercises/weighted-chin-up/
+    - assets/exercises/weighted-crunch/
+    - assets/exercises/weighted-dip/
+    - assets/exercises/weighted-pull-up/
+    - assets/exercises/weighted-push-up/
+    - assets/exercises/weighted-russian-twist/
+    - assets/exercises/wide-grip-lat-pulldown/
+    - assets/exercises/wide-push-up/
+    - assets/exercises/worlds-greatest-stretch/
+    - assets/exercises/wrist-curl/
+    - assets/exercises/wrist-extension/
+    # END GENERATED ASSETS

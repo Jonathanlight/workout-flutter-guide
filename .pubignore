@@ -1,0 +1,14 @@
+# Keep the published archive lean: only the library, the SVG assets, the
+# example sources and the licensing paperwork ship to pub.dev.
+.github/
+docs/
+example/build/
+example/.dart_tool/
+example/android/
+example/ios/
+example/linux/
+example/macos/
+example/windows/
+example/web/
+tool/
+*.png
