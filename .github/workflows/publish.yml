@@ -68,5 +68,23 @@ jobs:
       - name: Dry run
         run: dart pub publish --dry-run
 
+      # `dart pub` does not pick up the OIDC token on its own -- the
+      # dart-lang/setup-dart action normally does this exchange, and it is not
+      # used here because it ships the Dart SDK alone. Without these two steps
+      # `pub publish` falls back to the interactive browser login and hangs on
+      # a localhost redirect the runner cannot serve.
+      - name: Exchange the OIDC token for a pub.dev credential
+        run: |
+          set -euo pipefail
+          token="$(curl -sSf \
+            -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=https://pub.dev" \
+            | jq -r '.value')"
+          echo "::add-mask::$token"
+          echo "PUB_TOKEN=$token" >> "$GITHUB_ENV"
+
+      - name: Authenticate with pub.dev
+        run: dart pub token add https://pub.dev --env-var PUB_TOKEN
+
       - name: Publish
         run: dart pub publish --force
