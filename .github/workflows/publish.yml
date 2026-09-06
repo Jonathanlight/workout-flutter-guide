@@ -1,0 +1,72 @@
+# Publishes the package to pub.dev when a `vX.Y.Z` tag is pushed.
+#
+# Authentication uses OIDC: GitHub mints a short-lived token that pub.dev
+# exchanges for publishing rights, so there is no long-lived credential to
+# store as a repository secret. `id-token: write` is what allows that mint.
+#
+# The reusable `dart-lang/setup-dart` workflow is deliberately not used here:
+# it provisions the Dart SDK alone, and this package depends on `flutter`
+# from the SDK, so `pub get` would fail to resolve. The Flutter SDK ships
+# Dart, which covers both.
+name: Publish to pub.dev
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    # Must match the environment configured on pub.dev under
+    # "Enable publishing from GitHub Actions"; publishing is rejected otherwise.
+    environment: pub.dev
+
+    permissions:
+      id-token: write   # mint the OIDC token pub.dev verifies
+      contents: read
+
+    steps:
+      - name: Check out the tag
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Resolve dependencies
+        run: flutter pub get
+
+      # The quality gates from CLAUDE.md section 6. A tag that fails any of
+      # them must not reach pub.dev, where a published version is permanent.
+      - name: Verify formatting
+        run: dart format --set-exit-if-changed .
+
+      - name: Analyze
+        run: flutter analyze
+
+      - name: Run tests
+        run: flutter test
+
+      - name: Validate the 906 SVG frames
+        run: dart run tool/validate_assets.dart
+
+      - name: Check the tag against the pubspec version
+        run: |
+          tag_version="${GITHUB_REF_NAME#v}"
+          pubspec_version="$(sed -n 's/^version: *//p' pubspec.yaml)"
+          if [ "$tag_version" != "$pubspec_version" ]; then
+            echo "Tag $GITHUB_REF_NAME implies $tag_version, pubspec.yaml says $pubspec_version." >&2
+            echo "A pub.dev release is permanent -- align them and retag." >&2
+            exit 1
+          fi
+          echo "Publishing version $pubspec_version."
+
+      - name: Dry run
+        run: dart pub publish --dry-run
+
+      - name: Publish
+        run: dart pub publish --force
