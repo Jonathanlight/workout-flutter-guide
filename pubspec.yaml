@@ -3,7 +3,7 @@ description: >-
   302 exercises with 906 offline SVG frames, a typed catalog with search and
   filters, and ready-to-use Flutter widgets. Community port of
   @bryllim/workout-guide.
-version: 0.1.0
+version: 0.1.1
 repository: https://github.com/Jonathanlight/workout-flutter-guide
 issue_tracker: https://github.com/Jonathanlight/workout-flutter-guide/issues
 

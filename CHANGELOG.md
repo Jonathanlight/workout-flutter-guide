@@ -4,6 +4,15 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [semantic versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.1.1
+
+No user-facing change. Catalog: bryllim/workout-guide 1.0.0.
+
+The published archive is identical to 0.1.0: the only change since that
+release is the GitHub Actions publishing workflow, which `.pubignore` keeps
+out of the package. This version exists to exercise the automated release
+pipeline end to end.
+
 ## 0.1.0
 
 First release. Catalog: bryllim/workout-guide 1.0.0.
